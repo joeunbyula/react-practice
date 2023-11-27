@@ -1,38 +1,15 @@
-import {useState, useEffect} from "react";
-import styled from "./App.module.css"
+import UseEffect from "./UseEffect";
+import Showing from "./Showing";
+import Button from "./Button";
 
 function App() {
-    const [counter, setValue] = useState(0);
-    const [keyword, setKeyword] = useState("");
-    const onClick = () => setValue((prev) => prev + 1);
-    const onChange = (event) => setKeyword(event.target.value);
-    console.log("i run all the time");
-
-    /**
-     * useEffect : code가 한번만 실행될 수 있도록 도와준다.
-     */
-    useEffect(() => {
-        console.log("I run only once.");
-    }, []);
-
-    /**
-     * keyword,counter가 변할 때 실행
-     */
-    useEffect(()=>{
-        console.log("I run when 'keyword' changes. ==> ", keyword);
-    },[keyword]);
-
-    useEffect(() => {
-        console.log("I run when 'counter' changes ==> ", counter);
-    }, [counter]);
-    useEffect(() => {
-        console.log("I run when 'counter' and 'keyword' changes ==> ", counter);
-    },[keyword, counter])
     return (
         <div>
-            <input value={keyword} type="text" onChange={onChange} placeholder="Search here..."/>
-            <h1 className={styled.title}>Welcome {counter}</h1>
-            <button onClick={onClick}>click me</button>
+            <Button text="css btn"/>
+            <hr/>
+            <UseEffect/>
+            <hr/>
+            <Showing/>
         </div>
     );
 }
