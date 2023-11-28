@@ -1,15 +1,9 @@
-import UseEffect from "./UseEffect";
-import Showing from "./Showing";
-import Button from "./Button";
+import CoinTracker from "./coinTracker/CoinTracker";
 
 function App() {
     return (
         <div>
-            <Button text="css btn"/>
-            <hr/>
-            <UseEffect/>
-            <hr/>
-            <Showing/>
+            <CoinTracker/>
         </div>
     );
 }

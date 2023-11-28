@@ -6,10 +6,10 @@ import {useEffect, useState} from "react";
 function Hello() {
     function hihi() {
         console.log("created :)");
+        return byebye;
     }
     function byebye() {
         console.log("bye :(");
-        return byebye;
     }
     useEffect(hihi, []);
     return <h1>Hello!</h1>
