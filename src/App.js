@@ -1,11 +1,8 @@
-import CoinTracker from "./coinTracker/CoinTracker";
+import React from "react";
+import AppRoutes from "./AppRoutes";
 
 function App() {
-    return (
-        <div>
-            <CoinTracker/>
-        </div>
-    );
+   return <AppRoutes/>;
 }
 
 export default App;
